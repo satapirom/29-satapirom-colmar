@@ -16,20 +16,8 @@
 html {
   width: 100%;
   height: 100%;
+  scroll-behavior: smooth;
   font-family: Arial, Helvetica, sans-serif;
-}
-h3 {
-  font-size: 3rem;
-  color: var(--derk-grey);
-}
-h4 {
-  font-size: 1.8rem;
-  color: var(--derk-grey);
-}
-p,
-span {
-  font-size: 1.75rem;
-  color: var(--derk-grey);
 }
 .header {
   max-width: 100%;
@@ -99,7 +87,6 @@ span {
     margin: 32px 24px;
     img {
       width: 100%;
-      height: 100%;
     }
   }
 
@@ -108,68 +95,88 @@ span {
     color: var(--derk-grey);
     h1 {
       font-size: 4rem;
+      margin: 32px 0px;
     }
     p {
       font-size: 2rem;
       margin: 24px 0px;
     }
-    .button {
+    .btn {
       font-size: 1.5rem;
       padding: 8px;
+      display: flex;
+      justify-content: center;
+      text-decoration: none;
       background: var(--derk-grey);
       color: var(--white);
     }
   }
+  @media screen and (max-width: 480px) {
+      flex-direction: column;
+      .hero-firsh {
+        width: 100%;
+        margin: 0px;
+        padding: 0px;
+      }
+      .hero-second h1{
+            margin: 32px 16px;
+            font-size: 3rem;
+        }
+      .hero-second p{
+            margin: 0px 16px 24px;
+            font-size: 1.75rem;
+        }
+      .hero-second .btn{
+            margin: 24px 16px 32px 16px;
+            background: var(--grey);
+        }
+
+
+    }  
 }
 
-@media screen and (max-width: 480px) {
-  .hero {
-    flex-direction: column;
-  }
-  .hero .hero-firsh {
-    width: 100%;
-    margin: 0px;
-    padding: 0px;
-  }
-  .hero .hero-second {
-    width: 100%;
-    .button {
-      display: flex;
-      align-items: center;
-      width: 100%;
-      padding: 32px 16px;
-      background: var(--grey);
-    }
-  }
-}
-
-/* hero section section */
+/* infomation section section */
 .info {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  background: var(--white);
-
-  /* info-main */
-  .info-main {
-    width: 60%;
-    overflow: hidden;
-    img,
-    h3,
-    p,
-    span {
-      width: 100%;
-      margin: 32px 24px 32px 24px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background: var(--white);
+  
+    /* information mian section */
+    .info-main {
+      width: 60%;
+      overflow: hidden;
+      margin: 32px 24px;
+      img {
+        width: 100%;
+      }
+      h3 {
+        font-size: 2.5rem;
+        margin-top: 32px;
+      }
+      p, span {
+        font-size: 1.5rem;
+        margin-top: 24px;
+        margin-bottom: 32px;
+      }
+      @media screen and (max-width:480px){
+        display: none;}
     }
-  }
-  .info-content {
+
+   /* hero second section */ 
+   .info-content {
+
+   }
+}
+
+  /* .info-content {
     width: 40%;
     height: auto;
     .orinetation {
       width: 100%;
       display: flex;
       align-content: center;
-      margin: 32px;
+      margin: 16px;
       padding-left: 24px;
       img {
         width: 35%;
@@ -184,16 +191,16 @@ span {
           margin: 8px 0px;
         }
         a {
-          font-size: 1.3rem;
+          font-size: 1.2rem;
           text-decoration: none;
           color: var(--blue);
         }
       }
     }
   }
-}
+} */ */
 
-@media screen and (max-width: 480px) {
+/* @media screen and (max-width: 480px) {
   .info {
     flex-direction: column;
     .info-main {
@@ -208,4 +215,4 @@ span {
       }
     }
   }
-}
+} */
